@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Toyota EGO - Proyecto Técnico
 
-## Getting Started
+Sitio web profesional desarrollado para Toyota EGO siguiendo especificaciones de Figma, consumiendo datos desde la API de EGO Design.
 
-First, run the development server:
+## 🚀 Stack Tecnológico
+
+- **Framework:** Next.js 16.1.1 (App Router + Turbopack)
+- **Lenguaje:** TypeScript (Strict Mode)
+- **Estilos:** Tailwind CSS
+- **React:** 19
+- **Diseño:** Mobile-first, Responsive
+
+## 🔌 API Consumida
+
+El proyecto consume datos desde la API de EGO Design:
+
+- **Listado de modelos:** `GET https://challenge.egodesign.dev/api/models/`
+- **Detalle de modelo:** `GET https://challenge.egodesign.dev/api/models/{id}/`
+
+Los datos incluyen información de vehículos, características (features) y destacados (highlights) con sus respectivas imágenes.
+
+## ✨ Características
+
+- Consumo de API REST para datos dinámicos
+- Sistema de filtros por segmento (Sedan, Hatchback, SUVs, Pickups)
+- Ordenamiento por precio y año
+- Carrusel infinito con drag/touch support
+- Páginas dinámicas de fichas de vehículos
+- Componentes reutilizables siguiendo DRY
+- Design tokens configurados en Tailwind
+
+## 🛠️ Instalación
+
+```bash
+npm install
+```
+
+## 🏃‍♂️ Desarrollo
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abrí [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🏗️ Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## 📝 Estructura del Proyecto
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+├── app/              # Rutas y layouts (Next.js App Router)
+├── components/       # Componentes React
+│   ├── ui/          # Componentes base (Button, Slider, etc.)
+│   ├── layout/      # Header, Footer, Menu
+│   └── sections/    # Secciones de página
+├── hooks/           # Custom hooks
+├── lib/             # API, utilidades y constantes
+└── types/           # Tipos TypeScript
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🌐 Deploy en Netlify
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Este proyecto está configurado para desplegarse en Netlify:
 
-## Deploy on Vercel
+1. Conectá tu repositorio de GitHub con Netlify
+2. La configuración de build está en `netlify.toml`
+3. El plugin `@netlify/plugin-nextjs` se instalará automáticamente
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 👨‍💻 Desarrollado por
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Adrián** - [LinkedIn](https://www.linkedin.com/in/adrian4058) | adrian_2016_@outlook.es
+
+Desarrollador Full-Stack de Sunchales, Santa Fe, Argentina
+
+---
+
+Proyecto desarrollado con asistencia de Claude AI (Opus & Sonnet)

@@ -1,8 +1,17 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
   reactCompiler: true,
+  images: {
+    unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "challenge.egodesign.dev",
+        pathname: "/media/**",
+      },
+    ],
+  },
 };
 
 export default nextConfig;
